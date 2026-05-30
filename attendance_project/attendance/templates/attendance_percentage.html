@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Percentage</title>
+</head>
+<body>
+
+<h1>Attendance Percentage Report</h1>
+
+<table class="table table-hover">
+
+<tr>
+    <th>Student</th>
+    <th>Total Classes</th>
+    <th>Present</th>
+    <th>Attendance %</th>
+</tr>
+
+{% for row in data %}
+
+<tr>
+
+<td>{{ row.student.name }}</td>
+
+<td>{{ row.total }}</td>
+
+<td>{{ row.present }}</td>
+
+<td>{{ row.percentage }}%</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
+{% endblock %}

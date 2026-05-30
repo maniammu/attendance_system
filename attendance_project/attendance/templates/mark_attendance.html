@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mark Attendance</title>
+</head>
+<body>
+
+<h1>Mark Attendance</h1>
+
+<form method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">
+        Save Attendance
+    </button>
+
+</form>
+
+<br>
+
+<a href="/">Dashboard</a>
+
+</body>
+</html>
